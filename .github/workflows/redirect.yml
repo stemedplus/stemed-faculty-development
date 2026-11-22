@@ -1,6 +1,6 @@
 name: Publish the redirect
 
-# This site moved to https://jlib271.github.io/stemed-professional-development/
+# This site moved to https://stemedplus.github.io/stemed-professional-development/
 # Every day, publish a page that sends visitors there, plus copies of the combined site's calendar and RSS so
 # existing subscriptions keep working. Settings -> Pages -> Source stays: GitHub Actions.
 
@@ -32,8 +32,8 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p site/feeds
-          curl -fsSL https://jlib271.github.io/stemed-professional-development/feeds/deadlines.ics -o site/feeds/deadlines.ics
-          curl -fsSL https://jlib271.github.io/stemed-professional-development/feeds/new.xml -o site/feeds/new.xml
+          curl -fsSL https://stemedplus.github.io/stemed-professional-development/feeds/deadlines.ics -o site/feeds/deadlines.ics
+          curl -fsSL https://stemedplus.github.io/stemed-professional-development/feeds/new.xml -o site/feeds/new.xml
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
